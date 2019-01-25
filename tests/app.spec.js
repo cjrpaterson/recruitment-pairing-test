@@ -20,7 +20,7 @@ describe('app', () => {
             .get('/secret/resource')
             .expect(401)
             .then(response => {
-                expect(response.text).toBe('unauthorised')
+                expect(response.text).toBe('Unauthorised')
             })
     })
 })
