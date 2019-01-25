@@ -15,10 +15,10 @@ describe('app', () => {
             })
     })
 
-    it.skip('shows a 401/302 if the page is restricted', () => {
+    it.skip('shows a 401 if the page is restricted', () => {
         return request(app)
             .get('/secret/resource')
-            .expect(302)
+            .expect(401)
             .then(response => {
                 expect(response.text).toBe('unauthorised')
             })
