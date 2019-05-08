@@ -10,8 +10,8 @@ The goal of this story is to add authorization to one path in our webapp.
 
 Assume that a login page already exists (in a separate project) and that on successful login it sets a cookie like so:
 
-Cookie Name: MERGERMARKET
-Example cookie value: guid=5108055d1cc44a2d9e7cbcf0fcee8dae
+- Cookie Name: MERGERMARKET
+- Example cookie value: guid=5108055d1cc44a2d9e7cbcf0fcee8dae
 
 #### Authentication service
 
