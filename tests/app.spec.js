@@ -6,21 +6,25 @@ describe('app', () => {
         expect(app).toBeDefined()
     })
 
-    it('shows message on /open/resource', () => {
-        return request(app)
-            .get('/open/resource')
-            .expect(200)
-            .then(response => {
-                expect(response.text).toBe('anyone can see me')
-            })
-    })
+    describe('/open/resource', () => {
+        it('returns the resource', () => {
+            return request(app)
+              .get('/open/resource')
+              .expect(200)
+              .then(response => {
+                  expect(response.text).toBe('anyone can see me')
+              })
+        })
 
-    it.skip('shows a 401 if the page is restricted', () => {
-        return request(app)
-            .get('/secret/resource')
-            .expect(401)
-            .then(response => {
-                expect(response.text).toBe('Unauthorized')
-            })
+    })
+    describe('/secret/resource', () => {
+        it.skip('redirects to login page if the request contains no cookie', () => {
+            return request(app)
+              .get('/secret/resource')
+              .expect(302)
+              .then(response => {
+                  expect(response.header('Location')).toBe('https://login.acuris.com')
+              })
+        })
     })
 })
