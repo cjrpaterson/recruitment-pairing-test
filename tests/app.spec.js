@@ -23,7 +23,7 @@ describe('app', () => {
               .get('/secret/resource')
               .expect(302)
               .then(response => {
-                  expect(response.header('Location')).toBe('https://login.acuris.com')
+                  expect(response.header.location).toBe('https://login.acuris.com')
               })
         })
     })

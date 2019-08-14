@@ -42,7 +42,7 @@ Assume that a login page already exists (in a separate project) and that on succ
 Assume that the authentication service already exists (in a separate project) with a 'keep-alive' endpoint like so: 
 
 ```
-curl -XPOST  https://authentication-service.acuris.com/session/keep-alive/sessionid
+curl -XPOST  https://authentication-service.acuris.com/session/keep-alive/{sessionid}
 ```
 
 If the session ID is valid a success response will be returned like so:
