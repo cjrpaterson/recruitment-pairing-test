@@ -11,20 +11,20 @@ The goal of this story is to add authorization to one path in our webapp.
 ### Scenario 1 : No session cookie
 
 1. When I request /secret/resource,
-2. And my request does not includes a cookie with name `MERGERGMARKET`,
+2. And my request does not includes a cookie with name `MERGERMARKET`,
 3. Then I get a 302 response redirecting me to the login page at https://login.acuris.com
 
 ### Scenario 2 : Invalid session cookie
 
 1. When I request /secret/resource,
-2. And my request includes a cookie with name `MERGERGMARKET` and value `guid=<session ID>`,
+2. And my request includes a cookie with name `MERGERMARKET` and value `guid=<session ID>`,
 3. And the session ID is not valid according to authentication-service,
 4. Then I get a 302 response redirecting me to the login page at https://login.acuris.com
 
 ### Scenario 3 : Valid session cookie
 
 1. When I request /secret/resource,
-2. And my request includes a cookie with name `MERGERGMARKET` and value `guid=<session ID>`,
+2. And my request includes a cookie with name `MERGERMARKET` and value `guid=<session ID>`,
 3. And the session ID is valid according to authentication-service,
 4. Then I get a 200 response with the contents of the secret resource.
 
