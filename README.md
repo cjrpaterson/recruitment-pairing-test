@@ -2,7 +2,7 @@
 
 Starting point for the recruitment pairing test
 
-## What is thi?
+## What is this?
 
 This exercise is designed to see how you think about problems and go about solving them in a work environment. Treat this as a task in your normal working day. Feel free to use search engines, MDN, stackoverflow etc., ask questions and discuss ideas with the others in the room.
 
